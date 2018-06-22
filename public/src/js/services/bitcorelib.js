@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('insight.qtumcorelib').factory('QtumCoreLib',
+angular.module('insight.runebasecorelib').factory('RunebaseCoreLib',
     function() {
-        var QtumCoreLib = require('qtumcore-lib');
-        return QtumCoreLib;
+        var RunebaseCoreLib = require('runebasecore-lib');
+        return RunebaseCoreLib;
     });
 

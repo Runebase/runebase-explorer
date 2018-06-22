@@ -20,11 +20,11 @@
 		</div>
 		<div class="content__list content__list-blockchain" ng-if="IC.blockchainInfo">
 			<div class="item item-full">
-				<div class="label">{{ IC.blockchainInfo.supply | numeraljs : '0,0[.][00000000]' }} QTUM</div>
+				<div class="label">{{ IC.blockchainInfo.supply | numeraljs : '0,0[.][00000000]' }} RUNEBASE</div>
 				<div class="labeled" translate>Total Supply</div>
 			</div>
 			<div class="item item-full" ng-if="IC.blockchainInfo">
-				<div class="label">{{ (IC.blockchainInfo.supply - 12e6 > 0 ? IC.blockchainInfo.supply - 12e6 : 0) | numeraljs : '0,0[.][00000000]' }} QTUM</div>
+				<div class="label">{{ (IC.blockchainInfo.supply - 0 > 0 ? IC.blockchainInfo.supply - 0 : 0) | numeraljs : '0,0[.][00000000]' }} RUNEBASE</div>
 				<div class="labeled" translate>Circulating Supply</div>
 			</div>
 			<div class="limiter"></div>
@@ -179,7 +179,7 @@
 					class="insight__chartTitle"
 					ng-if="IC.chartOptions.data && IC.chartOptions.labels">
 				{{ IC.chartDays }}
-				{{ 'day QTUM Transaction History' | translate }}
+				{{ 'day RUNEBASE Transaction History' | translate }}
 			</div>
 			<div class="" ng-if="IC.chartOptions.data && IC.chartOptions.labels">
 				<div class="">
@@ -201,7 +201,7 @@
 			<h3 class="heading__title" translate>About</h3>
 		</div>
 		<div class="content__body">
-			<p translate>Insight is an <a href="https://insight.is/" target="_blank">open-source Quantum blockchain explorer</a> with complete REST and websocket APIs that can be used for writing web wallets and other apps that need more advanced blockchain queries than provided by quantumd RPC. Check out the <a href="https://github.com/bitpay/insight-ui" target="_blank" class="ng-scope">source code</a>.
+			<p translate>Insight is an <a href="https://insight.is/" target="_blank">open-source Runebase blockchain explorer</a> with complete REST and websocket APIs that can be used for writing web wallets and other apps that need more advanced blockchain queries than provided by runebased RPC. Check out the <a href="https://github.com/bitpay/insight-ui" target="_blank" class="ng-scope">source code</a>.
 			</p>
 			<p translate>Insight is still in development, so be sure to report any bugs and provide feedback for improvement at our <a href="https://github.com/bitpay/insight-ui/issues" target="_blank" class="ng-scope">github issue tracker</a>.
 			</p>
@@ -228,7 +228,7 @@
 	<div class="content__full air-b" data-ng-controller="SendRawTransactionController as SRTC">
 		<div class="heading">
 			<h1 class="heading__title">Send Raw Transaction</h1>
-			<p class="heading__desc">You could enter a Signed Raw Transaction in hex format and broadcast it over the QTUM network.</p>
+			<p class="heading__desc">You could enter a Signed Raw Transaction in hex format and broadcast it over the RUNEBASE network.</p>
 		</div>
 		<div class="section">
 	

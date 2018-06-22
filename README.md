@@ -1,6 +1,6 @@
 # Explorer
 
-A QTUM blockchain explorer web application service for [Qtumcore Node](https://github.com/qtumproject/qtumcore-node) using the [QTUM API](https://github.com/qtumproject/insight-api).
+A RUNEBASE blockchain explorer web application service for [Runebasecore Node](https://github.com/runebase/runebasecore-node) using the [RUNEBASE API](https://github.com/runebase/insight-api).
 
 
 ## Getting Started
@@ -13,44 +13,44 @@ A QTUM blockchain explorer web application service for [Qtumcore Node](https://g
     ```  
 2. Install mongo https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/  
 
-3. Install qtum-bitcore https://github.com/qtumproject/qtum-bitcore - with ZMQ ! 
+3. Install runebase-bitcore https://github.com/runebase/runebase-bitcore - with ZMQ ! 
 
     ```bash
     # with ZMQ
     sudo apt-get install libzmq3-dev 
     ```  
-4. Install qtumcore-node  
+4. Install runebasecore-node  
 
     ```bash
-    npm i https://github.com/qtumproject/qtumcore-node.git#master
+    npm i https://github.com/runebase/runebasecore-node.git#master
 
-    $(npm bin)/qtumcore-node create mynode
+    $(npm bin)/runebasecore-node create mynode
 
     cd mynode
 
-    $(npm bin)/qtumcore-node install https://github.com/qtumproject/insight-api.git#master
-    $(npm bin)/qtumcore-node install https://github.com/qtumproject/qtum-explorer.git#master
+    $(npm bin)/runebasecore-node install https://github.com/runebase/insight-api.git#master
+    $(npm bin)/runebasecore-node install https://github.com/runebase/runebase-explorer.git#master
     ```  
-5. Edit qtumcore-node.json  
+5. Edit runebasecore-node.json  
 
     ```json
     {
       "network": "livenet",
       "port": 3001,
       "services": [
-        "qtumd",
-        "qtum-insight-api",
-        "qtum-explorer",
+        "runebased",
+        "runebase-insight-api",
+        "runebase-explorer",
         "web"
       ],
       "servicesConfig": {
-        "qtum-explorer": {
-          "apiPrefix": "qtum-insight-api",
-          "routePrefix": "qtum-explorer",
-          "nodemapLink": "https://qtum.org/en/nodemap"
+        "runebase-explorer": {
+          "apiPrefix": "runebase-insight-api",
+          "routePrefix": "runebase-explorer",
+          "nodemapLink": "https://runebase.org/en/nodemap"
        },
-       "qtum-insight-api": {
-         "routePrefix": "qtum-insight-api",
+       "runebase-insight-api": {
+         "routePrefix": "runebase-insight-api",
          "rateLimiterOptions": {
            "whitelist": [
              "123.456.12.34",
@@ -64,7 +64,7 @@ A QTUM blockchain explorer web application service for [Qtumcore Node](https://g
           "db": {
             "host": "127.0.0.1",
             "port": "27017",
-            "database": "qtum-api-livenet",
+            "database": "runebase-api-livenet",
             "user": "",
             "password": ""
          },
@@ -72,17 +72,17 @@ A QTUM blockchain explorer web application service for [Qtumcore Node](https://g
             "updateFromBlockHeight": 0
           }
         },
-        "qtumd": {
+        "runebased": {
           "spawn": {
-            "datadir": "/home/user/.qtum",
-           "exec": "/home/user/qtum-bitcore/src/qtumd"
+            "datadir": "/home/user/.runebase",
+           "exec": "/home/user/runebase-bitcore/src/runebased"
           }
         }
       }
     }
 
     ```  
-6. Edit qtum.conf  
+6. Edit runebase.conf  
 
     ```
     server=1
@@ -105,10 +105,10 @@ A QTUM blockchain explorer web application service for [Qtumcore Node](https://g
 7. Run Node  
 
     ```
-    $(npm bin)/qtumcore-node start
+    $(npm bin)/runebasecore-node start
     ```  
 
-8. Open a web browser to `http://localhost:3001/qtum-explorer` or `http://localhost:3001/qtum-insight-api`  
+8. Open a web browser to `http://localhost:3001/runebase-explorer` or `http://localhost:3001/runebase-insight-api`  
 
 ## Development
 
@@ -159,11 +159,11 @@ compile***.
 
 ## Note
 
-For more details about the [QTUM API](https://github.com/qtumproject/insight-api) configuration and end-points, go to [QTUM API](https://github.com/qtumproject/insight-api).
+For more details about the [RUNEBASE API](https://github.com/runebase/insight-api) configuration and end-points, go to [RUNEBASE API](https://github.com/runebase/insight-api).
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Explorer GitHub repository](https://github.com/qtumproject/qtum-explorer).
+Contributions and suggestions are welcomed at the [Explorer GitHub repository](https://github.com/runebase/runebase-explorer).
 
 
 ## License
