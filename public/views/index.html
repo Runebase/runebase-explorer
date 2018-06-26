@@ -20,11 +20,11 @@
 		</div>
 		<div class="content__list content__list-blockchain" ng-if="IC.blockchainInfo">
 			<div class="item item-full">
-				<div class="label">{{ IC.blockchainInfo.supply | numeraljs : '0,0[.][00000000]' }} RUNEBASE</div>
+				<div class="label">{{ IC.blockchainInfo.supply | numeraljs : '0,0[.][00000000]' }} RUNES</div>
 				<div class="labeled" translate>Total Supply</div>
 			</div>
 			<div class="item item-full" ng-if="IC.blockchainInfo">
-				<div class="label">{{ (IC.blockchainInfo.supply - 0 > 0 ? IC.blockchainInfo.supply - 0 : 0) | numeraljs : '0,0[.][00000000]' }} RUNEBASE</div>
+				<div class="label">{{ (IC.blockchainInfo.supply - 0 > 0 ? IC.blockchainInfo.supply - 0 : 0) | numeraljs : '0,0[.][00000000]' }} RUNES</div>
 				<div class="labeled" translate>Circulating Supply</div>
 			</div>
 			<div class="limiter"></div>
@@ -50,7 +50,7 @@
 					<div class="labeled" translate>Block Height</div>
 				</div>
 				<div class="item">
-					<div class="label">{{ IC.blockchainInfo.reward ? IC.blockchainInfo.reward / 1e8 : 0 }} {{ IC.rewardCurrency }}</div> 
+					<div class="label">{{ IC.blockchainInfo.reward ? IC.blockchainInfo.reward / 1e8 : 0 }} RUNES</div> 
 					<div class="labeled" translate>Block Reward</div>
 				</div>
 			</div>
